@@ -1,0 +1,95 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon"> {% endcomment %}
+    <title>{% block title %}{% endblock title %}</title>
+    
+    {% block head %}
+    {% endblock head %}
+
+</head>
+
+<body>
+
+    <header>
+        <section id="navbar">
+
+            <nav>
+                <input type="checkbox" id="check">
+            <label id="check-label" for="check" class="checkbtn">
+                <i class='bx bx-menu'></i>
+               
+            </label>
+                <div class="logo">
+                    <h1><a href="index.html"><img class="logo-img" src="/img/jyoti-maurya-logo.svg"
+                        alt="Jyoti Maurya - Ayurvedic Medical Science sasayurveda"><span> Jyoti Maurya </span></a>
+                <h1>
+                </div>
+                <ul class=" menu-list">
+                    
+                    <li> <a href="#intro">Home</a> </li>
+
+                    <li> <a href="#blog">Blog</a> </li>
+                    <li> <a href="#about">About</a> </li>
+                    <li> <a href="#contact">Contact</a></li>
+                    <li class="nav-ul-social"> <a target="_blank" href="#"><i class='bx bxl-linkedin'></i> <span class="sr-only">Linked In
+                            </span></a> </li>
+                    <li class="nav-ul-social"> <a target="_blank" href="https://www.instagram.com/its_peachpie/"><i class='bx bxl-instagram'></i><span class="sr-only">Instagram
+                            </span></a> </li>
+                    <li class="nav-ul-social"> <a target="_blank" href="#"><i class='bx bxl-youtube'></i><span class="sr-only">YouTube
+                            </span></a> </li>
+                    <li> <a class="nav-subs" class="nav-email" href="mailto:jyoti@onionreads.com">Subscribe</a></li>
+
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+
+    <main>
+        {% block main %}
+        {% endblock main %}
+    </main>
+
+    
+
+    <footer>
+        <div class="last-new">
+
+            <p>Get access to exclusive update...</p>
+
+            <div class="subscription-box">
+                <input id="subscription" placeholder="youremail.com" required type="email">
+                <a target="_blank" href="mailto:jyoti@onionreads.com">Subscribe</a>
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="last-text ">
+
+            <p class="font-ss">Designed & Developed with <i id="heart" class=' bx bxs-heart'></i> Love by <span><a
+                        class="ad-link" href="https://adarshmaurya.onionreads.com/">Adarsh Maurya</a></span> &copy; 2023
+            </p>
+        </div>
+    </footer>
+
+    {% block script %}
+    
+    {% endblock script %}
+
+
+
+</body>
+
+</html>
