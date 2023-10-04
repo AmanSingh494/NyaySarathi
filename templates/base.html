@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon"> {% endcomment %}
-    <title>{% block title %}{% endblock title %}</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <title>NyaySarathi | {% block title %}{% endblock title %}</title>
     
     {% block head %}
     {% endblock head %}
@@ -28,24 +28,26 @@
                
             </label>
                 <div class="logo">
-                    <h1><a href="index.html"><img class="logo-img" src="/img/jyoti-maurya-logo.svg"
-                        alt="Jyoti Maurya - Ayurvedic Medical Science sasayurveda"><span> Jyoti Maurya </span></a>
+                    <h1><a href="/"><img class="logo-img" src="{% static 'img/nyaysarathi.jpg' %}" 
+                        alt="NyaySarathi - Laws made simpler! legal help provider online"><span> NyaySarathi </span></a>
                 <h1>
                 </div>
                 <ul class=" menu-list">
                     
-                    <li> <a href="#intro">Home</a> </li>
+                    <li> <a href="/">Home</a> </li>
 
-                    <li> <a href="#blog">Blog</a> </li>
-                    <li> <a href="#about">About</a> </li>
-                    <li> <a href="#contact">Contact</a></li>
-                    <li class="nav-ul-social"> <a target="_blank" href="#"><i class='bx bxl-linkedin'></i> <span class="sr-only">Linked In
+                    <li> <a href="/about">About</a> </li>
+                    <li> <a href="/services">Services</a> </li>
+                    <li> <a href="/contact">Contact</a></li>
+                    {% comment %} <li class="nav-ul-social"> <a target="_blank" href="#"><i class='bx bxl-linkedin'></i> <span class="sr-only">Linked In
                             </span></a> </li>
                     <li class="nav-ul-social"> <a target="_blank" href="https://www.instagram.com/its_peachpie/"><i class='bx bxl-instagram'></i><span class="sr-only">Instagram
                             </span></a> </li>
                     <li class="nav-ul-social"> <a target="_blank" href="#"><i class='bx bxl-youtube'></i><span class="sr-only">YouTube
-                            </span></a> </li>
-                    <li> <a class="nav-subs" class="nav-email" href="mailto:jyoti@onionreads.com">Subscribe</a></li>
+                            </span></a> </li> {% endcomment %}
+                    <li> <a class="nav-subs" class="nav-btn" href="/login">Login</a></li>
+                    <li> <a class="nav-subs" class="nav-btn" href="/signup">Sign Up</a></li>
+
 
                 </ul>
             </nav>
