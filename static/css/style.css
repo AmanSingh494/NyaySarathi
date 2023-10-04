@@ -191,13 +191,13 @@ nav li:last-child:hover {
 
 }
 
-nav li [class="nav-email"] {
+nav li [class="nav-btn"] {
     font-weight: 600;
     /*   color:var(--white); */
 
 }
 
-nav li [class="nav-email"]:hover {
+nav li [class="nav-btn"]:hover {
     color: var(--white);
 
 }
