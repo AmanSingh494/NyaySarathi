@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Vidura {% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+{% endblock head %}
+
+{% block main %}
+    <h1>Hi! Let's talk with Vidura, Your personal Legal Assistant! </h1>
+{% endblock main %}
+
+{% block script %}
+<script src="js/script.js"></script>
+{% endblock script %}
