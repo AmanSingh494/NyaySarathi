@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %} Login {% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+{% endblock head %}
+
+{% block main %}
+<div class="mainContainer">
+    <div class="sub-c">
+        
+        <div class="sub-c-1">
+            <h1 class="head">Login</h1>
+            <div class="form">
+                <form id="my-form" method="post" action="/login">
+                    {% csrf_token %}
+                    
+                    <div class="form-c-1">
+                        <label class="sub-head" for="username">
+                            Username
+                        </label>
+                        <img class="input-img" src="/static/img/user2.png" alt="user">
+                        <input class="form-f" id="username" name="username" required  placeholder="Type your username" type="text">
+                        
+                    </div>
+
+                    <div class="form-c-1">
+                        <label class="sub-head" for="password">
+                            Password
+                        </label>
+                        <img class="input-img" src="/static/img/padlock.png" alt="lock">
+                        <input class="form-f" id="password" name="password" placeholder="Type your Password" type="password" required>
+
+                    </div>
+                    
+                </form>
+                <h4 id="forgot"> <a href="#">Forgot password?</a></h4>
+
+                <button id="login-btn" class="login-btn">LOGIN</button>
+
+            </div>
+            <div class="sign-up">
+                Don't have an account? <span> <a href="/signup">Signup</a></span>!
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock main %}
+
+{% block script %}
+<script src="js/script.js"></script>
+{% endblock script %}
