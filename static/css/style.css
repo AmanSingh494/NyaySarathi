@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen&family=Oxygen+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oxygen&family=Oxygen+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
 
 :root {
-    --almond: #FFEBCD;
-    --apple-green: #8DB600;
+    --blue: #5D12D2;
+    --peach: #FFE5E5 ;
     --font-size: 1.3rem;
     --deep-saffron: #FF9933;
-    --earth-green: #61A775;
-    --mono: "Oxygen mono", monospace;
-    --sans: Oxygen, sans-serif;
-    --white: #f7f8fa;
+    --pink: #FF6AC2;
+    --deep-pink:#a852a3;
+    --mono: Montserrat, monospace;
+    --sans: Poppins, sans-serif;
+    --white: #fff;
     --black: #171321;
     --font-head: Montserrat, monopsace;
 
@@ -45,7 +45,7 @@ h3 {
 }
 
 a {
-    color: var(--apple-green);
+    color: var(--deep-pink);
 
 
 }
@@ -78,7 +78,7 @@ nav {
 }
 .checkbtn{
     font-size: 30px;
-    color:var(--apple-green);
+    color:var(--deep-pink);
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -117,12 +117,12 @@ nav {
 }
 .logo h1 a{
     color: var(--black);
-    font-family: var(--sans);
+    font-family: var(--mono);
     text-decoration: none;
 }
 
 .logo h1 a:hover{
-    color: var(--earth-green);
+    color: var(--deep-pink);
 
 }
 
@@ -133,7 +133,7 @@ nav h1 a {
 }
 
 nav h1 a i {
-    color: var(--apple-green);
+    color: var(--deep-pink);
     /*   font-size: 150%; */
 }
 
@@ -142,11 +142,9 @@ nav h1 a i:hover {
 
 }
 
-/* nav li:first-child {
-    /*   flex-basis:100%; */
-    /* text-align: left;
-    margin-right: auto;
-} */ 
+#nav-signup{
+    color: white;
+}
 
 nav [class*="bxl-"] {
     font-size: 150%;
@@ -166,10 +164,12 @@ nav h1 [class*="bxl-"] {
     text-decoration: none;
     color: var(--black);
     display: block;
+    font-weight: 600;
 }
 
-.menu-list li a:hover {
-    color: var(--apple-green);
+.menu-items:hover {
+    color: var(--deep-pink);
+    border-bottom: 2px solid var(--deep-pink);
 }
 
 .sr-only {
@@ -178,7 +178,7 @@ nav h1 [class*="bxl-"] {
 
 nav li:last-child {
     padding: 0.7rem;
-    background-color: var(--apple-green);
+    background-color: var(--deep-pink);
     color: var(--white);
     border-radius: 5%;
     font-weight: 600;
@@ -204,7 +204,11 @@ nav li [class="nav-btn"]:hover {
 .logo-img{
     width: 35px;
 }
+.logo-img span{
+    font-weight: 600;
+    font-family: var(--font-head);
 
+}
 #intro {
     padding: 0 4rem;
     padding-bottom: 10rem;
@@ -228,7 +232,7 @@ nav li [class="nav-btn"]:hover {
     padding: 12px 24px;
     font-family: var(--font-head);
     font-size: 18px;
-    background-color: var(--apple-green);
+    background-color: var(--deep-pink);
     color: var(--white);
     font-weight: 600;
     border-radius: 5px;
@@ -245,7 +249,7 @@ nav li [class="nav-btn"]:hover {
 
 
 #intro p {
-    font-size: 1rem;
+    font-size: 20px;
     line-height: 1.5;
 }
 
@@ -255,14 +259,14 @@ nav li [class="nav-btn"]:hover {
 }
 
 .name span {
-    font-size: 4rem;
+    font-size: 2.2rem;
     display: block;
     font-family: var(--sans);
-    color: var(--apple-green);
+    color: var(--deep-pink);
 }
 
 #intro h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: normal;
 
 }
@@ -272,7 +276,7 @@ nav li [class="nav-btn"]:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/img/jyoti-maurya-lite.webp);
+    background-image: url(/static/img/nyaySarathiHome.webp);
     background-size: contain;
     /* z-index: 999; */
     background-repeat: no-repeat;
@@ -284,7 +288,7 @@ nav li [class="nav-btn"]:hover {
 .back-img-box{
     width: 50%;
     height: 50%;
-    background-color: var(--apple-green);
+    background-color: var(--deep-pink);
     border-radius: 50%;
 
 }
@@ -384,7 +388,7 @@ nav li [class="nav-btn"]:hover {
 }
 
 .cta-button:hover {
-    background-color: var(--apple-green);
+    background-color: var(--deep-pink);
     color: var(--black);
 
 }
@@ -413,7 +417,7 @@ nav li [class="nav-btn"]:hover {
 }
 
 .post-section h2 span{
-    color: var(--apple-green);
+    color: var(--deep-pink);
 
 }
 .wp-posts{
@@ -473,7 +477,7 @@ nav li [class="nav-btn"]:hover {
 
 .read-more-link {
     padding: 10px;
-    background: var(--apple-green);
+    background: var(--deep-pink);
     color: var(--black);
     border-radius: 7px;
     /* letter-spacing: 1px; */
@@ -488,7 +492,7 @@ nav li [class="nav-btn"]:hover {
 
 }
 .read-more-link:hover{
-    /* box-shadow: 0 0 25px var(--apple-green); */
+    /* box-shadow: 0 0 25px var(--deep-pink); */
     background-color: var(--black);
     color: var(--white);
 
@@ -543,7 +547,7 @@ nav li [class="nav-btn"]:hover {
 }
 
 .contact-text h2 span{
-    color:var(--apple-green);
+    color:var(--deep-pink);
 }
 
 .contact-text h4{
@@ -603,18 +607,18 @@ nav li [class="nav-btn"]:hover {
     width: 50px;
     height: 50px;
     background: transparent;
-    border: 2px solid var(--apple-green);
+    border: 2px solid var(--deep-pink);
     border-radius: 50%;
     font-size: 20px;
-    color: var(--apple-green);
+    color: var(--deep-pink);
     text-decoration: none;
     margin: 6px 15px 6px 0;
 
 }
 .contact-links a:hover {
-    background: var(--apple-green);
+    background: var(--deep-pink);
     color:var(--white);
-    box-shadow: 0 0 20px var(--apple-green);
+    box-shadow: 0 0 20px var(--deep-pink);
     transform: scale(1.01) translateY(-4px);
     
 }
@@ -691,7 +695,7 @@ footer{
 }
 
 .subscription-box a{
-    background-color: var(--apple-green);
+    background-color: var(--deep-pink);
     color: var(--white);
     /* height: 50px; */
     padding: 12px 24px;
@@ -735,7 +739,7 @@ footer{
 .top i{
     color: #000000;
     /* background: #0ef; */
-    background-color: var(--apple-green);
+    background-color: var(--deep-pink);
     font-size: 25px;
     padding: 10px;
     border-radius: 50%;
