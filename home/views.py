@@ -17,3 +17,12 @@ def services(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def vidura(request):
+    return render(request, "vidura.html")
+
+def login(request):
+    return render(request, "login.html")
+
+def signup(request):
+    return render(request, "signup.html")
