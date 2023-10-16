@@ -1,7 +1,11 @@
 let submit = document.getElementById('login-btn');
 
-submit.addEventListener('click', function(){
+submit.addEventListener('click', function(event){
     let myForm = document.getElementById('my-form');
+
+    // prevent defualt submission
+    event.preventDefault()
+
     myForm.submit();
     console.log('Submitted Successfully! ');
     

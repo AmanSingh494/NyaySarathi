@@ -7,7 +7,7 @@ submit.addEventListener('click', function(){
     
 })
 
-let input = document.getElementById('password');
+let input = document.getElementById('cnf-password');
 
 input.addEventListener("keypress", function(event){
     if (event.key==="Enter"){
