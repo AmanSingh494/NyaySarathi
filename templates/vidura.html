@@ -7,13 +7,61 @@
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'css/vidura.css' %}">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 {% endblock head %}
 
 {% block main %}
-    <h1>Hi! Let's talk with Vidura, Your personal Legal Assistant! </h1>
+<!-- <h1 >Hi! Let's talk with Vidura, Your personal Legal Assistant! </h1> -->
+
+<section class="home" id="home">
+    <div class="container">
+        <div class="bot-img">
+            <img src="{% static 'img/chatbot.svg' %}" alt="Bot">
+        </div>
+        <!-- for dispalying the user chats -->
+        <div class="main-chat">
+            <div class="chat-box">
+              
+                    <div class="bot-message">
+                        <p>{{ greeting }}</p>
+                    </div>
+                    <div class="user-message" id="main-chbot">
+                        <!-- User messages will be displayed here -->
+                    </div>
+                    
+
+
+            </div>
+            <div class="chat-img-box">
+
+            </div>
+
+        </div>
+        <!-- For accepting response from user in a input box -->
+        <div class="user-box">
+            <div class="us-box-ins">
+
+                <div id="chatbox" class="mess-fm">
+                    <form id="chat-form" method="POST" action="">
+                        {% csrf_token %}
+                        <input name="message" id="message" required type="text" placeholder="Enter your message...">
+                    </form>
+                </div>
+                <div id="mess-btn" class="mess-btn">
+                    <i class='bx bx-send'></i>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</section>
 {% endblock main %}
 
 {% block script %}
-<script src="js/script.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock script %}

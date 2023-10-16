@@ -19,7 +19,7 @@
         <div class="sub-c-1">
             <h1 class="head">SignUp</h1>
             <div class="form">
-                <form id="my-form" method="post" action="/signup">
+                <form id="my-form" method="post" action="/signup/">
                     {% csrf_token %}
                     
                     <div class="form-c-1">
@@ -74,6 +74,6 @@
 {% endblock main %}
 
 {% block script %}
-<script src="js/script.js"></script>
-<script src="js/signup.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/signup.js' %}"></script>
 {% endblock script %}

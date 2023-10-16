@@ -5,6 +5,9 @@ from django.urls import path, include
 
 from home import views
 
+
+# Errors- user name is already defined in django, use different name for writing function 
+
 urlpatterns = [
     path("", views.index , name="home"),
     
@@ -12,8 +15,8 @@ urlpatterns = [
     path("contact/", views.contact , name="contact"),
     path("services/", views.services , name="services"),
     path("vidura/", views.vidura, name="vidura"),
-    path("login/",views.login, name="login"),
-    path("signup/", views.signup, name="signup"),
+    path("login/",views.loginUser, name="loginUser"),
+    path("signup/", views.signupUser, name="signupUser"),
     
 
 

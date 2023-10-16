@@ -23,10 +23,11 @@ def contact(request):
     return render(request, "contact.html")
 
 def vidura(request):
-    return render(request, "vidura.html")
+    greeting = "Hi, How can I assist you today? "
+    return render(request, "vidura.html", {"greeting" : greeting })
 
 
-def login(request):
+def loginUser(request):
     if request.method =="POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -50,7 +51,7 @@ def login(request):
 
     return render(request, 'login.html')
 
-def signup(request):
+def signupUser(request):
     if request.method =="POST":
         # Get the parameters
         username = request.POST['username']
