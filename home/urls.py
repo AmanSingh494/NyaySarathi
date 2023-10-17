@@ -14,7 +14,7 @@ urlpatterns = [
     path("about/", views.about , name="about"),
     path("contact/", views.contact , name="contact"),
     path("services/", views.services , name="services"),
-    path("vidura/", views.vidura, name="vidura"),
+    
     path("login/",views.loginUser, name="loginUser"),
     path("signup/", views.signupUser, name="signupUser"),
     

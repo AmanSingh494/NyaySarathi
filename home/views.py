@@ -22,9 +22,7 @@ def services(request):
 def contact(request):
     return render(request, "contact.html")
 
-def vidura(request):
-    greeting = "Hi, How can I assist you today? "
-    return render(request, "vidura.html", {"greeting" : greeting })
+
 
 
 def loginUser(request):
@@ -77,11 +75,11 @@ def signupUser(request):
 
         # Check if the username and email are unique
         if User.objects.filter(username=username).exists():
-            messages.error(request, "This username is already taken. Please choose a different one.")
+            messages.error(request, "username is already taken. Please choose a different one.")
             return redirect('/')
 
         if User.objects.filter(email=email).exists():
-            messages.error(request, "This email is already associated with an account.")
+            messages.error(request, "Email is already associated with an account.")
             return redirect('/')
 
 
@@ -89,7 +87,7 @@ def signupUser(request):
         myuser = User.objects.create_user(username, email, pass1)
         myuser.save()
 
-        messages.success(request, "Your Socol account has been created!")
+        messages.success(request, "Your NyaySarathi account has been created!")
         return redirect('/')
 
 
@@ -99,4 +97,9 @@ def signupUser(request):
 
     return render(request, 'signup.html')
 
+
+# view for handling errors
+
+def error_handler(request):
+    return HttpResponse('404 Page')
 
