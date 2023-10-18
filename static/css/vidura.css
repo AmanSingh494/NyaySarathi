@@ -1,7 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .container{
     width: 100%;
     height: auto;
 
+
+}
+
+.error-message{
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    
+
+}
+.error-message p{
+    color: var(--deep-pink);
+    font-size: 16px;
+    font-family: var(--sans);
+    padding:12px;
+    margin: 6px;
 
 }
 body{
