@@ -43,8 +43,10 @@ def loginUser(request):
 
         else:
             # No backend authenticated the credentials
-            messages.error(request, "Invalid username or password! Please try again.")
-            return render(request, 'login.html')
+            error_message = "Invalid username or password! Please try again."
+            messages.error(request, error_message)
+            # return render(request, 'login.html')
+            return render(request, "login.html", {"error_message" : error_message} )
 
 
     return render(request, 'login.html')
@@ -59,36 +61,41 @@ def signupUser(request):
 
         # check for erroneous parameters
         if len(username) > 10:
-            messages.error(request, "username must be under 10 characters.")
-            return redirect('/')
+            error_msg1 = "username must be under 10 characters."
+            messages.error(request,error_msg1 )
+            return render(request, 'signup.html', {"error_message" : error_msg1})
 
         # Checking username fulfills the criteria
         if not username.isalnum():
-            messages.error(request, "username should only contain letters and nubmers ")
-            return redirect('/')
+            error_msg2 = "username should only contain letters and nubmers "
+            messages.error(request, error_msg2)
+            return render(request,'signup.html', {"error_message" : error_msg2})
         
         # password should match
         if pass1 != pass2:
-            messages.error(request, "passwords do not match!")
-            return redirect('/')
+            error_msg3 = "passwords do not match!"
+            messages.error(request, error_msg3 )
+            return render(request, 'signup.html', {"error_message" : error_msg3})
         
 
         # Check if the username and email are unique
         if User.objects.filter(username=username).exists():
-            messages.error(request, "username is already taken. Please choose a different one.")
-            return redirect('/')
+            error_msg4 = "username is already taken. Please choose a different one."
+            messages.error(request, error_msg4 )
+            return render(request,'signup.html', {"error_message" : error_msg4})
 
         if User.objects.filter(email=email).exists():
-            messages.error(request, "Email is already associated with an account.")
-            return redirect('/')
+            error_msg5 = "Email is already associated with an account."
+            messages.error(request,error_msg5 )
+            return render(request, 'signup.html', {"error_message" : error_msg5})
 
 
         # Create the user.
         myuser = User.objects.create_user(username, email, pass1)
         myuser.save()
-
-        messages.success(request, "Your NyaySarathi account has been created!")
-        return redirect('/')
+        success_msg = "Your NyaySarathi account created Successfully!"
+        messages.success(request, success_msg )
+        return render(request, 'vidura.html', {"error_message" : success_msg})
 
 
     # else:
