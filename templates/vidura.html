@@ -16,6 +16,12 @@
 
 <section class="home" id="home">
     <div class="container">
+    {% if error_message %}
+    <div class="error-message">
+    <p> {{ error_message }} </p>
+    </div>
+
+    {% endif %}
         <div class="bot-img">
             <img src="{% static 'img/chatbot.svg' %}" alt="Bot">
         </div>
