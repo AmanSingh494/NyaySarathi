@@ -12,6 +12,7 @@ from django.http import JsonResponse
 import json
 import openai
 import requests
+# from django.conf import settings 
 
 # Create your views here.
 
@@ -19,10 +20,13 @@ import requests
 # By chat-gpt needs modification for further usage 
 def get_vidura_response(user_message):
     # Define your OpenAI API endpoint
-    endpoint = "https://api.openai.com/v1/engines/davinci-codex/completions"
+    # endpoint = "https://api.openai.com/v1/engines/davinci-codex/completions"
+    endpoint = "https://api.openai.com/v1/engines/davinci/completions"
 
     # Set your OpenAI API key
-    api_key = "YOUR_OPENAI_API_KEY"
+    
+    # api_key = "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"
+    api_key = "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"
 
     # Define the data for the API request
     data = {
@@ -41,6 +45,10 @@ def get_vidura_response(user_message):
     if response.status_code == 200:
         return response.json().get("choices")[0].get("text")
     else:
+        # getting the error messae
+        with open("response.txt", 'w') as f:
+            f.write(response.text)
+            
         return "I'm sorry, I couldn't process your request at the moment."
 
 

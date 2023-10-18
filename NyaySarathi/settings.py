@@ -30,6 +30,10 @@ ALLOWED_HOSTS = []
 # Appending slash
 # APPEND_SLASH = False
 
+# # Accessing api key
+# from decouple import config 
+# OPENAI_API_KEY = config('OPENAI_API_KEY')
+
 
 # Application definition
 
