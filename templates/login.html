@@ -16,8 +16,11 @@
 <div class="mainContainer">
 
     {% if error_message %}
-    <div class="error-message">
+    <div  id="error-message" class="error-message">
         <p> {{ error_message }} </p>
+        <div id="cross-btn" class="cross-btn">
+            <i class='bx bx-x '></i>
+        </div>
     </div>
 
     {% endif %}
