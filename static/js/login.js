@@ -25,6 +25,7 @@ input.addEventListener("keypress", function(event){
 
 })
 
+// For Error message displaying and closing it 
 let crossBtn = document.getElementById("cross-btn");
 let errorMsgElem = document.getElementById("error-message");
 
