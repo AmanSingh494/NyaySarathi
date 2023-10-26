@@ -3,18 +3,19 @@
 {% load static %}
 {% block title %}Home{% endblock title %}
 {% block head %}
+
 <head>
-   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
-   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   <!-- <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script> -->
 
 </head>
 
 {% endblock head %}
 
 <body>
-    
+
     {% block main %}
 
     <main>
@@ -22,96 +23,156 @@
 
             <div class="intro-text">
                 <p class="name">Welcome to <span> NyaySarathi </span></p>
-                <h2>Your Personal assitant to Simplified Laws and Justice!</h2>
-
-                <!-- <p>I'm a student specializing in Ayurvedic Medical Sciences.
-                <p> -->
-                <p> Get answers to your legal questions, and access the right guidance with our <a  href="/login">Vidura</a> digital assistant.</p>
-                <a class="blog-link"  href="/login">Vidura Chatbot<i
+                <h2>Your Personal assitant to Simplify Law and Justice!</h2>
+                <p> Get answers to your legal questions, and access the right guidance with our
+                    <a href="/login">Vidura</a> digital assistant.
+                </p>
+                <div class="rating-details">
+                    <div>
+                        <p class="font-medium">1.2M</p>
+                        <p>Users</p>
+                    </div>
+                    <div>
+                        <p class="font-medium">5K+</p>
+                        <p>Lawyers</p>
+                    </div>
+                    <div>
+                        <p class="font-medium">50K+</p>
+                        <p>Students</p>
+                    </div>
+                    <div>
+                        <p class="font-medium">4.0</p>
+                        <p>Rating</p>
+                    </div>
+                </div>
+                <a class="font-we-medium  btn-border" href="/login">Vidura Chatbot<i
                         class='bx bxs-chevron-right'></i></a>
-
-
-
             </div>
 
             <div class="intro-img">
-                <!-- <div class="back-img-box">
-
-                </div> -->
-                <!-- <img src="/img/jyoti-maurya-transformed-new.png" alt="Jyoti Maurya"> -->
             </div>
 
 
 
         </section>
-        <div class="gradient">
-
-        </div>
-        
-        <div class="gradient">
-
-        </div>
-        <!-- <div class="home-wave">
-
-        </div> -->
-        <section id="about" class="about content-section">
-            <h2>About <span>Me</span></h2>
-    
-            <div class="about-main">
-    
-                <div class="about-container">
-                    <div class="about-img">
-                        <img src="/img/jyoti-maurya-lite.webp" alt="Jyoti Maurya - Ayurvedic Medical Science sasayurveda">
-                    </div>
-                    <div class="about-content">
-                        <h3>Hi, I'm Jyoti Maurya</h3>
-                        <p>I'm a dedicated student specializing in Ayurvedic Medical Sciences at SAS Ayurvedic Medical
-                            College in Varanasi.</p>
-                        <p>My passion lies in exploring the ancient wisdom of Ayurveda and sharing it with the world. I
-                            believe in the power of natural healing and holistic wellness.</p>
-                        <p>Join me on this journey of discovery and well-being!</p>
-                    </div>
+        <section class="help">
+            <p class="font-medium font-we-medium">How we can help you :</p>
+            <div class="help-clients">
+                <div>
+                    <span>
+                        <p class="font-we-medium font-mid-medium">Students</p>
+                        <p class="line">
+                        </p>
+                    </span>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem laboriosam modi dolores
+                        recusandae,
+                        perferendis quas ratione? Officia ratione quod fugit consequuntur, mollitia a impedit corporis
+                        provident? Dicta ea dolorum saepe aliquam a non aperiam vel fugiat numquam quidem? Neque
+                        obcaecati
+                        minima nostrum eos alias natus? Exercitationem et voluptates facere atque.
+                    </span>
+                    <a class="btn" href="">Learn More</a>
                 </div>
-                <div class="cta-section">
-                    <div class="about-img">
-                        <img src="/img/yoga-green-2.jpg" alt="Jyoti Maurya - Ayurvedic Medical Science sasayurveda">
-                    </div>
-                    <h3 class="cta-heading">Join the Ayurveda Revolution</h3>
-                    <p class="cta-text">Are you ready to embrace a life of balance, vitality, and harmony? Let's embark
-                        on this transformative journey together.</p>
-                    <a class="cta-button" href="#contact">Connect with Me <i class='bx bx-envelope'></i></a>
-                    <a class="cta-button" target="_blank" href="https://ayurupchar.onionreads.com/">Explore Blog <i
-                            class='bx bxs-book'></i></a>
+                <div>
+                    <span>
+                        <p class="font-we-medium font-mid-medium">Lawyers</p>
+                        <p class="line">
+                        </p>
+                    </span>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem laboriosam modi dolores
+                        recusandae,
+                        perferendis quas ratione? Officia ratione quod fugit consequuntur, mollitia a impedit corporis
+                        provident? Dicta ea dolorum saepe aliquam a non aperiam vel fugiat numquam quidem? Neque
+                        obcaecati
+                        minima nostrum eos alias natus? Exercitationem et voluptates facere atque.
+                    </span>
+                    <a class="btn" href="">Learn More</a>
                 </div>
-    
+                <div>
+                    <span>
+                        <p class="font-we-medium font-mid-medium">Users</p>
+                        <p class="line">
+                        </p>
+                    </span>
+                    <span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem laboriosam modi dolores
+                        recusandae,
+                        perferendis quas ratione? Officia ratione quod fugit consequuntur, mollitia a impedit corporis
+                        provident? Dicta ea dolorum saepe aliquam a non aperiam vel fugiat numquam quidem? Neque
+                        obcaecati
+                        minima nostrum eos alias natus? Exercitationem et voluptates facere atque.
+                    </span>
+                    <a class="btn" href="">Learn More</a>
+                </div>
             </div>
-    
-    
-    
-    
-    
-    
-        </section>
-        <section class="post-section content-section" id="blog">
-
-            <h2>Latest <span>Posts</span></h2>
-            <div id="wp-posts" class="wp-posts">
-
+            <div class="clients-img">
+                <div><img src="../static/img/student.png" height="130px" width="150px" alt="students">
+                    <p class="font-medium">Students</p>
+                </div>
+                <div><img src="../static/img/lawyer.png" height="130px" width="150px" alt="lawyer">
+                    <p class="font-medium">Lawyers</p>
+                </div>
+                <div><img src="../static/img/farmer.png" height="130px" width="150px" alt="farmer">
+                    <p class="font-medium">Farmers</p>
+                </div>
             </div>
         </section>
-
-        <div class="gradient">
-
-        </div>
-
-
-
-        
+        <section class="faqs-section">
+            <div class="faqs">
+                <div class="faqs-div">
+                    <div>
+                        <span> <img src="{% static 'img/Forward-button.png' %}" alt="right-arrow">
+                        </span>
+                        <span class="font-we-medium font-mid-mid-medium">
+                            How does NyaySarthi help in spreading Legal Awareness?
+                        </span>
+                    </div>
+                    <span><img class="btn-rotate" src="{% static 'img/right-arrow.svg'  %}" alt="right-arrow"></span>
+                </div>
+                <div class="faqs-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi officia molestiae voluptates
+                    voluptate iste consectetur, ab, totam accusamus quisquam sed molestias. Quae facere, maiores cum
+                    consequuntur sequi ratione ducimus cupiditate similique id, ea, aperiam eos! Dolores exercitationem
+                    voluptas hic autem eligendi odit accusantium laudantium omnis dignissimos eveniet consequatur eum
+                    excepturi necessitatibus sint, iste harum mollitia nulla repudiandae nesciunt pariatur ad dicta?
+                    Eveniet, modi voluptate quam hic eligendi quis eum laudantium quos, reprehenderit recusandae
+                    architecto assumenda necessitatibus voluptates quo, debitis nam perspiciatis eius dignissimos at
+                    accusantium nemo! Debitis obcaecati aut enim neque magnam suscipit, adipisci voluptates, magni
+                    similique esse eveniet doloribus!
+                </div>
+            </div>
+            <div class="faqs">
+                <div class="faqs-div">
+                    <div>
+                        <span> <img src="{% static 'img/Forward-button.png' %}" alt="right-arrow">
+                        </span>
+                        <span class="font-we-medium font-mid-mid-medium">
+                            How does NyaySarthi help in spreading Legal Awareness?
+                        </span>
+                    </div>
+                    <span><img class="btn-rotate" src="{% static 'img/right-arrow.svg'  %}" alt="right-arrow"></span>
+                </div>
+                <div class="faqs-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque maiores suscipit error
+                    exercitationem autem ipsum laudantium labore rem ex aliquid, at incidunt. Aut, consectetur cumque
+                    fugit, perferendis voluptates, laudantium quidem doloribus odio exercitationem porro enim maiores
+                    mollitia quo nemo architecto. Reiciendis vitae maxime voluptatem numquam. Suscipit quibusdam eaque,
+                    porro reiciendis quos ut nesciunt, est voluptatibus eum veniam nisi soluta quidem nobis quisquam
+                    numquam fugit praesentium saepe. Quia, aliquid maiores impedit architecto vero fuga voluptas placeat
+                    autem ducimus. Officia, quam nulla ea nesciunt quaerat autem rem quae, modi, illo assumenda porro.
+                    Sint eius blanditiis velit sed, voluptatum nesciunt iusto aperiam perferendis!
+                </div>
+            </div>
+        </section>
     </main>
     {% endblock main %}
 
     {% block script %}
-    {% comment %} <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> {% endcomment %}
+    {% comment %}
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> {% endcomment %}
+    <script src="../static/js/script.js"></script>
     <script src="js/script.js"></script>
     {% endblock script %}
 
