@@ -12,6 +12,5 @@ urlpatterns = [
 
     path("vidura/", views.vidura, name="vidura"),
 
-    
-    
+ 
 ]

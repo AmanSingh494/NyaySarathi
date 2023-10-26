@@ -8,6 +8,8 @@ from django.http import JsonResponse
 # from django.contrib import messages
 # from django.http import HttpResponse
 
+from django.utils import timezone
+from .models import Chat
 # For API handling and request OpenAI
 import json
 import openai
@@ -16,51 +18,41 @@ import requests
 
 # Create your views here.
 
+# Set your OpenAI API key
+# from decouple import config 
+# api_key = config('OPENAI_API_KEY') 
+
+openai.api_key_path = "F:/backup-kali/codeFiles/projects/NyaySarathi/.env"
 
 # By chat-gpt needs modification for further usage 
 def get_vidura_response(user_message):
-    # Define your OpenAI API endpoint
-    # endpoint = "https://api.openai.com/v1/engines/davinci-codex/completions"
-    endpoint = "https://api.openai.com/v1/engines/davinci/completions"
-
-    # Set your OpenAI API key
     
-    # api_key = "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"
-    api_key = "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"
-
-    # Define the data for the API request
-    data = {
-        "prompt": user_message,
-        "max_tokens": 50  # Adjust the number of tokens as needed
-    }
-
-    # Set headers with your API key
-    headers = {
-        "Authorization": f"Bearer {api_key}"
-    }
-
-    # Send a POST request to the OpenAI API
-    response = requests.post(endpoint, data=json.dumps(data), headers=headers)
-
-    if response.status_code == 200:
-        return response.json().get("choices")[0].get("text")
-    else:
-        # getting the error messae
-        with open("response.txt", 'w') as f:
-            f.write(response.text)
-            
-        return "I'm sorry, I couldn't process your request at the moment."
-
+    response = openai.ChatCompletion.create(
+        model = "gpt-3.5-turbo",
+        messages = [
+            {"role": "system", "content":"You are an helpful Legal Assistant who has knowledge of Constitution of India along with that, you have read all the books regarding Legal "},
+            {"role": "user", "content": user_message},
+        ]
+    )
+    answer = response.choices[0].message.content.strip()
+    return answer
+    
 
 # Handliing request for vidura from openai api
 def vidura(request):
-    greeting = "Hi, How can I assist you today? "
+    chats = Chat.objects.filter(user = request.user)
 
     if request.method == 'POST':
         user_message = request.POST.get("message")
         vidura_response = get_vidura_response(user_message)
-        return JsonResponse({"message": vidura_response})
+
+        chat = Chat(user = request.user, message = user_message, response= vidura_response, created_at = timezone.now())
+
+        chat.save()
+
+
+        return render(request, "vidura.html", {"chats": chats})
     
-    return render(request, "vidura.html", {"greeting" : greeting })
+    return render(request, "vidura.html", {"chats" : chats })
 
 
