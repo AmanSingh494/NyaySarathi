@@ -118,7 +118,7 @@ messageForm.addEventListener('submit', (event) => {
             messageItem.innerHTML = `
       <div class="message-text">
           <div class="message-sender">
-            <b>AI Chatbot</b>
+            <b>Vidura AI</b>
           </div>
           <div class="message-content">
               ${response}
