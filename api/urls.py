@@ -11,6 +11,5 @@ from . import views
 urlpatterns = [
 
     path("vidura/", views.vidura, name="vidura"),
-
  
 ]
