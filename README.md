@@ -67,7 +67,7 @@ I'm a web developer, programmer and blogger...
 
 
 ## 🛠 Skills
-Javascript, HTML, CSS, Python, Django, Wordpress,  Article Writing
+Javascript, HTML, CSS, Python, Django, Wordpress, C, C++, Content Writing
 
 
 ## 🔗 Links
