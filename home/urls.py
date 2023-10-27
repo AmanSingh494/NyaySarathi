@@ -17,6 +17,7 @@ urlpatterns = [
     
     path("login/",views.loginUser, name="loginUser"),
     path("signup/", views.signupUser, name="signupUser"),
+    path("logout/", views.logoutUser, name="logout"),
     
 
 
