@@ -22,7 +22,6 @@ html {
   box-sizing: inherit;
   text-decoration: none;
 }
-
 body {
   margin: 0px;
   padding: 0px;
@@ -75,7 +74,7 @@ nav {
   color: var(--color-primary);
   float: right;
   line-height: 80px;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 
   cursor: pointer;
   display: none;
@@ -232,7 +231,7 @@ nav li [class='nav-btn']:hover {
 }
 
 #intro p {
-  font-size: 20px;
+  /* font-size: 20px; */
   line-height: 1.5;
 }
 
@@ -248,7 +247,7 @@ nav li [class='nav-btn']:hover {
 }
 
 #intro h2 {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
   font-weight: normal;
 }
 
@@ -716,9 +715,9 @@ footer {
 /* css 2  */
 * {
   box-sizing: border-box;
-  /* font-family: 'Sometype Mono', monospace; */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  /* font-family: 'Sometype Mono', monospace; 
+  font-size: 1rem; */
+  /* font-family: 'Montserrat', sans-serif; */
 }
 
 .font-large {
@@ -733,6 +732,12 @@ footer {
 }
 .font-mid-mid-medium {
   font-size: 1.1rem;
+}
+.font-normal {
+  font-size: 1rem;
+}
+.font-small {
+  font-size: 0.8rem;
 }
 .font-we-medium {
   font-weight: bold;

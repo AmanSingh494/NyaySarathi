@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache" />
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <title>NyaySarathi | {% block title %}{% endblock title %}</title>
 
@@ -22,10 +23,6 @@
 
             <nav>
                 <input type="checkbox" id="check">
-                <label id="check-label" for="check" class="checkbtn">
-                    <i class='bx bx-menu'></i>
-
-                </label>
                 <div class="logo">
                     <a href="/"><img class="logo-img" height="70px" width="75px" src="{% static 'img/icon.png' %}"
                             alt="NyaySarathi - Laws made simpler! legal help provider online"></a>
@@ -46,6 +43,10 @@
 
 
                 </ul>
+                <label id="check-label" for="check" class="checkbtn">
+                    <img src="{%static 'img/hamburger-icon.png'  %}" alt="">
+
+                </label>
             </nav>
         </section>
     </header>
