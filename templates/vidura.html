@@ -92,7 +92,7 @@
             <div class="us-box-ins">
 
                 <div id="chatbox" class="mess-fm">
-                    <form  class="message-form" id="chat-form" method="POST" action="">
+                    <form  class="message-form" id="chat-form" method="POST" >
                         {% csrf_token %}
                         <input class="message-input" name="message" id="message" required type="text" placeholder="Enter your message...">
                     </form>
