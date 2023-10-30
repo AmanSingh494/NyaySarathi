@@ -13,3 +13,4 @@ class Chat(models.Model):
 
     def __str__(self) -> str:
         finalOutput =  f"{self.user.username} : {self.message}"
+        return finalOutput

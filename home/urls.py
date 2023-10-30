@@ -19,8 +19,9 @@ urlpatterns = [
     path("signup/", views.signupUser, name="signupUser"),
     path("logout/", views.logoutUser, name="logout"),
     
-
-
-
     
 ]
+
+# defining custom 404 url page :
+# Define the custom 404 page view
+handler404 = 'home.views.custom_404_page'

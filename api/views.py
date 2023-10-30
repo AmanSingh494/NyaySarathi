@@ -3,10 +3,6 @@ from django.shortcuts import render,redirect
 from django.http import JsonResponse
 # written by admin
 
-# from django.contrib.auth.models import User
-# from django.contrib.auth import authenticate,login, logout
-# from django.contrib import messages
-# from django.http import HttpResponse
 
 from django.utils import timezone
 from .models import Chat
@@ -18,9 +14,7 @@ import requests
 
 # Create your views here.
 
-# Set your OpenAI API key
-# from decouple import config 
-# api_key = config('OPENAI_API_KEY') 
+
 
 openai.api_key_path = "F:/backup-kali/codeFiles/projects/NyaySarathi/.env"
 

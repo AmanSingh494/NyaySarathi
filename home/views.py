@@ -116,3 +116,6 @@ def logoutUser(request):
 def error_handler(request):
     return HttpResponse('404 Page')
 
+def custom_404_page(request, exception):
+    return render(request, "404.html", status=404)
+
