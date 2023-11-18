@@ -1,0 +1,11 @@
+body{
+    background-color: azure;
+    
+}
+.notfound-box{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
