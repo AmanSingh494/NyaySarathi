@@ -24,7 +24,7 @@
             <nav>
                 <input type="checkbox" id="check">
                 <div class="logo">
-                    <a href="/"><img class="logo-img" height="70px" width="75px" src="{% static 'img/icon.png' %}"
+                    <a href="/"><img class="logo-img" height="70px" width="75px" src="{% static 'img/logo4.jpg' %}"
                             alt="NyaySarathi - Laws made simpler! legal help provider online"></a>
                     <h1 class="font-large">
                         NyaySarathi
@@ -32,14 +32,14 @@
                 </div>
                 <ul class=" menu-list">
 
-                    <li> <a class="menu-items" href="/">Home</a> </li>
+                    <li> <a class="menu-items font-normal" href="/">Home</a> </li>
 
-                    <li> <a class="menu-items" href="/about">About</a> </li>
-                    <li> <a class="menu-items" href="/services">Services</a> </li>
-                    <li> <a class="menu-items" href="/contact">Contact</a></li>
+                    <li> <a class="menu-items font-normal" href="/about">About</a> </li>
+                    <li> <a class="menu-items font-normal" href="/services">Services</a> </li>
+                    <li> <a class="menu-items font-normal" href="/contact">Contact</a></li>
 
-                    <li> <a class="menu-items font-we-medium  btn-border" href="/login">Login</a></li>
-                    <li> <a class="btn" id="nav-signup" href="/signup">Sign Up</a></li>
+                    <li> <a class="menu-items font-normal font-we-medium  btn-border" href="/login">Login</a></li>
+                    <li> <a class="btn font-normal" id="nav-signup" href="/signup">Sign Up</a></li>
 
 
                 </ul>
@@ -61,6 +61,36 @@
 
     <footer>
         <div class="last-new">
+            <div>
+                <p>Get access to exclusive update...</p>
+                <span class="subscription-box">
+                    <input id="subscription" placeholder="youremail.com" required type="email">
+                    <a target="_blank" href="mailto:jyoti@onionreads.com">Subscribe</a>
+                </span>
+            </div>
+            <span class="contact-links">
+                <a target="_blank" href="#"><i class='bx bxl-linkedin'></i></a>
+    
+                <a target="_blank" href="https://www.instagram.com/its_peachpie/"><i class='bx bxl-instagram'></i></a>
+    
+                <a target="_blank" href="#"><i class='bx bxl-youtube'></i></a>
+    
+                <a target="_blank" href="#"><i class='bx bxl-facebook'></i></a>
+    
+                <a target="_blank" href="#"><i class='bx bxl-twitter'></i></a>
+    
+    
+    
+            </span>
+            <span>
+                <p class="font-ss">Designed & Developed with <i id="heart" class=' bx bxs-heart'></i> Love by <span><a
+                            class="ad-link" href="https://adarshmaurya.onionreads.com/">Solve-Ease</a></span> &copy;
+                    2023
+                </p>
+            </span>
+    </footer>
+    <!-- <footer>
+        <div class="last-new">
 
             <p>Get access to exclusive update...</p>
 
@@ -81,7 +111,7 @@
                         class="ad-link" href="https://adarshmaurya.onionreads.com/">Solve-Ease</a></span> &copy; 2023
             </p>
         </div>
-    </footer>
+    </footer>  -->
 
     {% block script %}
 

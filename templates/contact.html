@@ -11,66 +11,53 @@
 {% endblock head %}
 
 {% block main %}
-    <h1>Hi! Welcome to Contact page?  </h1>
-    <section id="contact" class="contact content-section">
 
-
-        <div class="contact-text">
-            <h2 class="font-head">Contact <span>Me</span></h2>
-            <!-- <h4 class="font-head">Let's Get In Touch</h4> -->
-            <h3><i class='bx bxs-quote-alt-left'></i> ॐ सर्वे भवन्तु सुखिनः  <i class='bx bxs-quote-alt-right' ></i></h3>
-            <p class="font-ss">
-                <b>Do you recognize the significance of an Ayurvedic lifestyle?</b><br>
-                By adopting the principles of Ayurveda, we can take a step towards a life filled with balance,
-                vitality, and harmony. Join me on this journey of discovering the treasures of natural healing and
-                holistic well-being.
-            </p>
-
-            
-
-            <div class="contact-list">
-                <ul>
-                    <li><i class='bx bxs-send'></i>jyoti@onionreads.com</li>
-                    <li><i class='bx bxs-phone'></i>+91-XXXXXXXXX</li>
-                </ul>
-
-
+<section id="contact" class="contact content-section">
+    <div class="contact-main">
+        <h1 class="font-extra-large"><img src="{% static 'img/communicate.png'%}" alt="communicate-icon">Connect with us
+        </h1>
+        <div class="contact-details">
+            <div class="contact-box"><img src="{%static 'img/Email.png' %}" alt="Email-icon">
+                <span class="font-medium">solveaseofficial@gmail.com</span>
+                <span class="font-medium">solveaseunofficial@gmail.com</span>
             </div>
-
-
-            <div class="contact-links">
-                <a target="_blank" href="#"><i
-                        class='bx bxl-linkedin'></i></a>
-
-                <a target="_blank" href="https://www.instagram.com/its_peachpie/"><i class='bx bxl-instagram'></i></a>
-
-                <a target="_blank" href="#"><i class='bx bxl-youtube'></i></a>
-
-                <a target="_blank" href="#"><i
-                        class='bx bxl-facebook'></i></a>
-
-                <a target="_blank" href="#"><i class='bx bxl-twitter'></i></a>
-
-
-
+            <div class="contact-box"><img src="{%static 'img/WhatsApp.png' %}" alt="WhatsApp-icon">
+                <span class="font-medium">91XXXXXXXXX</span>
+                <span class="font-medium">91XXXXXXXXX</span>
+                <span class="font-medium">91XXXXXXXXX</span>
             </div>
-
+            <div class="contact-box"><img src="{%static 'img/profile-icon.png' %}" alt="profile-icon"></div>
         </div>
-
-        <div class="contact-form">
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSek0oN0Otsks6bsRk5oZKOiZyA_jrT77PQNOvF3TpJnpY2LQw/viewform?embedded=true"
-                width="644" height="411" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
 
 
+    </div>
 
+    <div class="contact-form">
+        <div class="form">
+            <h1>Contact us :</h1>
+            <form action="">
+                <div><label for="name">Name:</label>
+                    <input type="text">
+                </div>
+                <div><label for="phone no.">Phone no.</label>
+                    <input type="text">
+                </div>
+                <div><label for="Email">Email</label>
+                    <input type="text">
+                </div>
+                <div><label for="message">Message</label>
+                    <input type="text">
+                </div>
+                <a class="btn">Send</a>
             </form>
         </div>
+        <div><img src="{% static 'img/contact-img.png'%}" alt="contact-img"></div>
+    </div>
 
+    <a href="#" class="top"> <i class='bx bx-up-arrow-alt'></i></a>
 
-        <a href="#" class="top"> <i class='bx bx-up-arrow-alt'></i></a>
-
-    </section>
+</section>
 
 
 {% endblock main %}

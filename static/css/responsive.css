@@ -1,10 +1,10 @@
-@media only screen and (max-width: 900px) and (min-width: 480px) {
+@media only screen and (max-width: 900px) and (min-width: 680px) {
   html {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
-  nav {
+  #navbar nav {
     padding: 1rem 2.5rem;
-    display: inline-flex;
+    display: flex;
     align-items: center;
   }
   .checkbtn {
@@ -22,24 +22,13 @@
   }
 
   .checkbtn {
-    display: block;
+    /* display: block; */
     /* position: absolute;
         right: 0px; */
   }
 
   .menu-list {
-    list-style-type: none;
-    display: inline-flex;
-    flex-direction: column;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: var(--white);
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-    padding-top: 70px;
+    gap: 1rem;
   }
 
   .nav-subs {
@@ -52,8 +41,6 @@
   }
 
   .menu-list li a {
-    font-size: 20px;
-    color: #7e7c7c;
     text-decoration: none;
   }
   .menu-list li a:hover,
@@ -143,13 +130,35 @@
   .contact-form {
     overflow: hidden;
   }
-
   .subscription-box input {
     width: 55vw;
   }
+  /* utilities */
+  .font-extra-large {
+    font-size: 1.5rem;
+  }
+  .font-large {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .font-medium {
+    font-size: 1rem;
+  }
+  .font-mid-mid-medium {
+    font-size: 0.9rem;
+  }
+  .font-mid-medium {
+    font-size: 0.7rem;
+  }
+  .font-normal {
+    font-size: 0.75rem;
+  }
+  .font-small {
+    font-size: 0.5rem;
+  }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 680px) {
   html {
     font-size: 1.3rem;
   }
@@ -251,8 +260,7 @@
     font-size: 20px;
   } */
   .intro-img {
-    width: 55vw;
-    margin: 2rem 0;
+    display: none;
   }
 
   #about {
@@ -315,10 +323,14 @@
   }
 
   .last-new {
-    width: calc(100%-3rem);
+    /* width: calc(100%-3rem);
     margin: 0 1.5rem;
     height: 200px;
-    transform: translateY(6rem);
+    transform: translateY(6rem); */
+    padding: 5vh;
+  }
+  .last-new div {
+    height: 9rem;
   }
   .last-new p {
     font-size: 18px;
@@ -326,6 +338,10 @@
 
   .contact-form {
     overflow: hidden;
+  }
+
+  .contact-form img {
+    display: none;
   }
   .last-text p {
     padding: 40px 1rem 0 1rem;
@@ -356,7 +372,7 @@
     font-size: 0.9rem;
   }
   .font-mid-medium {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .font-normal {
     font-size: 0.75rem;
@@ -385,7 +401,7 @@
   }
   /* help section */
   .help {
-    margin: 0 2rem;
+    margin: 2rem 2rem;
   }
   .help-clients {
     flex-direction: column;
@@ -395,7 +411,7 @@
     width: 100%;
   }
   .clients-img img {
-    height: 55px;
+    height: 65px;
     width: 75px;
   }
   /* faqs section */
@@ -404,5 +420,12 @@
   }
   .faqs-info {
     margin: 0 1rem;
+  }
+
+  /* CONTACTS PAGE */
+
+  /* contact-details */
+  .contact-details {
+    flex-direction: column;
   }
 }
