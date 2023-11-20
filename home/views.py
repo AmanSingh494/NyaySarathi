@@ -4,6 +4,7 @@ from django.http import JsonResponse
 # written by admin
 
 from django.contrib.auth.models import User
+from django.contrib import auth
 from django.contrib.auth import authenticate,login, logout
 from django.contrib import messages
 from django.http import HttpResponse
@@ -105,8 +106,16 @@ def signupUser(request):
     return render(request, 'signup.html')
 
 
+def logoutUser(request):
+    auth.logout(request)
+    return redirect("home")
+
+    
 # view for handling errors
 
 def error_handler(request):
     return HttpResponse('404 Page')
+
+def custom_404_page(request, exception):
+    return render(request, "404.html", status=404)
 

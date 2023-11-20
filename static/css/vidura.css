@@ -56,7 +56,7 @@ body{
 }
 
 .chat-box{
-   width: calc(40vw - 80px);
+   width: calc(60vw - 80px);
    height: 600px;
    padding:  0 40px;
    /* background-color: red; */
@@ -122,6 +122,10 @@ body{
 
 }
 
+.message-list{
+    list-style-type: none;
+    
+}
 .user-box{
     position: fixed;
     width: calc(100% - 40px);

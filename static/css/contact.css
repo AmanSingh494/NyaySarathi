@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    background-color: #fff;
+
+}
+.c-container{
+    width: calc(100% - 24px);
+
+    height: 600px;
+
+    padding: 20px 12px ;
+    display: inline-flex;
+    flex-direction: row;
+
+
+}
+.contact-img-box{
+    width: 50%;
+    padding:  40px;
+    /* background-image: url(/static/img/contact-img.jpg); */
+    background-image: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+.contact-img-box img{
+    width: 80%;
+
+}
+.about-text{
+    width: 40%;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+}
+
+.contact-links {
+
+    width: 300px;
+    height: 56px;
+    display: flex;
+    /* position: absolute;
+    right: 12px;
+    bottom: 10px; */
+    margin: 12px 0;
+
+}
+
+
+
+.contact-links a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid var(--deep-pink);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--deep-pink);
+    text-decoration: none;
+    margin: 6px 15px 6px 0;
+}
+.contact-links a:hover {
+    background: var(--deep-pink);
+    color: #fff;;
+    box-shadow: 0 0 20px var(--deep-pink);
+    transform: scale(1.01) translateY(-4px);
+}
+
+
+.btn-box{
+    width: 9.5rem;
+    height: 45px;
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 16px;
+    background: var(--deep-pink);
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-radius: 48px;
+    margin: 12px 0;
+    
+}
+.btn-box:hover{
+    box-shadow: 0 0 20px var(--deep-pink);
+}
+
+
+
+
+.font-ss{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about-text h1{
+    font-size: 32px ;
+    margin: 6px 0;
+    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.about-text h2{
+    font-size: 18px;
+    margin: 10px 0;
+    font-family:Montserrat, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.about-text p{
+    font-size: 16px;
+    font-family: sans-serif, monospace;
+    margin: 12px 0;
+
+
+}
+
+.foot-img{
+    width: calc(100%- 80px);
+    height: 200px;
+    margin: 0 75px;
+
+    background-image: url(/static/img/contact-foot.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}

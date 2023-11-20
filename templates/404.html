@@ -7,12 +7,17 @@
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'css/404_page.css' %}">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 {% endblock head %}
 
 {% block main %}
-    <h1> 404 - Page not found!  </h1>
-    <p> The page you are looking for no longer exists !</p>
+    <div class="notfound-box">
+        <img src="{% static 'img/404.jpg' %}" alt="404" class="notfound-img">
+        <h1> 404 - Page not found!  </h1>
+        <p> The page you are looking for no longer exists !</p>
+    </div>
+
 
 {% endblock main %}
 

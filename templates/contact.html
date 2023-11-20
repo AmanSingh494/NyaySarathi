@@ -1,17 +1,20 @@
-{% extends "base.html" %}
+
+{% extends 'base.html' %}
 
 {% load static %}
 
-{% block title %} Contact {% endblock title %}
+{% block title %}Contact {% endblock title %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
 <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 {% endblock head %}
 
 {% block main %}
 
+<<<<<<< HEAD
 <section id="contact" class="contact content-section">
     <div class="contact-main">
         <h1 class="font-extra-large"><img src="{% static 'img/communicate.png'%}" alt="communicate-icon">Connect with us
@@ -58,10 +61,56 @@
     <a href="#" class="top"> <i class='bx bx-up-arrow-alt'></i></a>
 
 </section>
+=======
+<section class="home" id="home">
+    <div class="c-container">
+       
+            <div class="contact-img-box">
+                <img src="{% static 'img/contact-img.jpeg' %}" alt="Contact ">
+    
+            </div>
+            <div class="about-text">
+                <h1>NyaySarathi</h1>
+                <h2>Justice is not a privilege but a Fundamental Right.</h2>
+                <p>A platform dedicated to spread legal awareness and making justice accessible to everyone irrespective of their background and education status. Vidura Chatbot respond to user queries related to legal topics in simple and understandable manner with mutlilingual support and voice input. </p>
+                <a target="_blank" href="https://adarshmaurya.onionreads.com/" class="btn-box font-ss">Protfolio <i class='bx bx-right-arrow-alt'></i> </a>
 
+                <div class="contact-links">
+                    <a target="_blank" href="https://www.linkedin.com/in/adarsh-maurya-09343a262/"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/4darsh-Dev" target="_blank"><i class='bx bxl-github'></i></a>
+                <a target="_blank" href="https://www.facebook.com/people/Onion-Reads/100089856034775"><i
+                        class='bx bxl-facebook'></i></a>
+                <a target="_blank" href="#"><i class='bx bxl-instagram'></i></a>
+                <a target="_blank" href="https://twitter.com/OnionReads"><i class='bx bxl-twitter'></i></a>
+            
+                </div>
+    
+            </div>
+
+           
+            
+    
+      
+        
+    </div>
+
+    <div class="foot-img">
+        
+    </div>
+>>>>>>> e5815c778f57d580a72c42ecb5aa37c33968ff30
+
+    
+</section>
 
 {% endblock main %}
 
 {% block script %}
+<<<<<<< HEAD
 <script src="{% static 'js/script.js' %}"></script>
+=======
+
+<script src="{% static 'js/script.js' %}"> </script>
+
+>>>>>>> e5815c778f57d580a72c42ecb5aa37c33968ff30
 {% endblock script %}

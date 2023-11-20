@@ -16,6 +16,15 @@
 
 <section class="home" id="home">
     <div class="container">
+
+        {% if user.is_authenticated  %}
+        <div class="user-intro"><b>Welcome, {{user.username}} </b> <a href="/logout">Logout</a></div>
+        
+        {% else %}
+            <div class="user-intro"><b>You are not Logged In? Login or Regsiter! </b></div>
+        {% endif %}
+
+
     {% if error_message %}
     <div  id="error-message" class="error-message">
         <p> {{ error_message }} </p>
@@ -26,6 +35,7 @@
 
 
     {% endif %}
+        
         <div class="bot-img">
             <img src="{% static 'img/chatbot.svg' %}" alt="Bot">
         </div>
@@ -33,13 +43,42 @@
         <div class="main-chat">
             <div class="chat-box">
               
-                    <div class="bot-message">
-                        <p>{{ greeting }}</p>
-                    </div>
-                    <div class="user-message" id="main-chbot">
-                        <!-- User messages will be displayed here -->
-                    </div>
-                    
+                    <ul class="message-list">
+
+                        {% for chat in chats  %}
+                        
+                        {% if chat.user == request.user %}
+                        
+                        <li class="message sent">
+                            <div class="message-text">
+                              <div class="message-sender">
+                                <b>You</b>
+                              </div>
+                              <div class="message-content">
+                                {{chat.message}}
+                              </div>
+                            </div>
+                          </li>
+                  
+                          <li class="message received">
+                            <div class="message-text">
+                              <div class="message-sender">
+                                <b>AI Chatbot</b>
+                              </div>
+                              <div class="message-content">
+                                {{chat.response}}
+                              </div>
+                            </div>
+                          </li>
+                        
+                        
+                        {% endif %}
+                        
+                        
+                        {% endfor %}
+                        
+
+                    </ul>
 
 
             </div>
@@ -53,9 +92,9 @@
             <div class="us-box-ins">
 
                 <div id="chatbox" class="mess-fm">
-                    <form id="chat-form" method="POST" action="">
+                    <form  class="message-form" id="chat-form" method="POST" >
                         {% csrf_token %}
-                        <input name="message" id="message" required type="text" placeholder="Enter your message...">
+                        <input class="message-input" name="message" id="message" required type="text" placeholder="Enter your message...">
                     </form>
                 </div>
                 <div id="mess-btn" class="mess-btn">
